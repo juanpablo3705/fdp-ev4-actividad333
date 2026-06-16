@@ -4,7 +4,7 @@ def validar_lista_numeros():
     while True:
         entrada = input("Ingrese una lista de números separados por espacios: ")
         elementos = entrada.split() # divide el ingreso de un str en elementos separados de una lista
-        numeros = [] # creo la lista donde voy a depositar dichos elementos
+        numeros = [] # creo la lista donde voy a depositar los str transformados a int
         try:
             for elemento in elementos: # uso ciclo for para transformar cada elemento de la lista que viene en str a int
                 numeros.append(int(elemento)) # en el append especifico que quiero añadir como int
