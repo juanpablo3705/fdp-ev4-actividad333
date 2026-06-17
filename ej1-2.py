@@ -11,12 +11,16 @@ def validar_lista_numeros():
         except ValueError:
             print("Error, sólo puede ingresar números separados por un espacio.")
 
-validar_lista_numeros
-lista = lista_int_ingreso
+lista = validar_lista_numeros() # capturar el valor de la variable lista_int_ingreso en la variable lista
 
 pares = []
 impares = []
 
-for cada_int in lista_int_ingreso:
-        
-
+for cada_int in lista:
+    if (cada_int % 2 == 0):
+        pares.append(cada_int)
+    else:
+        impares.append(cada_int)
+# no debo llamar a la funcion validar_lista_numeros() de nuevo, porque las variables ya existen
+print(f"Números pares: {pares}.")
+print(f"Números impares: {impares}.")
